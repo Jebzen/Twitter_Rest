@@ -29,6 +29,9 @@
 				background-position: center;
 				background-size: contain;
 			}
+			.message {
+				white-space: pre-wrap;
+			}
 		</style>
 	</head>
 	<body>
@@ -37,7 +40,9 @@
 			style="min-height: 100vh; overflow: hidden"
 		>
 			<section class="row h-min-100">
-				<header class="col border-end border-dark border-1 h-min-100">
+				<header
+					class="col border-end border-secondary border-1 h-min-100"
+				>
 					<section>Logo</section>
 					<section>Home</section>
 					<section>Explore</section>
@@ -47,7 +52,7 @@
 					<form
 						action="/backend"
 						method="post"
-						class="border-bottom border-dark border-1 p-3"
+						class="border-bottom border-secondary border-1 p-3"
 						id="post-form"
 					>
 						<div class="mb-3">
@@ -83,7 +88,7 @@
 					<section id="timeline">
 						<!-- POST TEMPLATE -->
 						<div
-							class="post p-3 border-bottom border-1 border-dark row mx-0"
+							class="post p-3 border-bottom border-1 border-secondary row mx-0"
 						>
 							<div class="col-auto">
 								<div
@@ -100,51 +105,13 @@
 						</div>
 					</section>
 				</main>
-				<footer class="col border-start border-dark border-1 h-min-100">
+				<footer
+					class="col border-start border-secondary border-1 h-min-100"
+				>
 					<section>News</section>
 				</footer>
 			</section>
 		</div>
-		<!--
-		<main class="container">
-			<h1>Hello world</h1>
-			<form
-				action="http://localhost/Peks/Twitter_Rest/twitter_rest/Backend/"
-				method="post"
-				class="mb-3"
-			>
-				<input
-					type="text"
-					name="name"
-					id="name_get"
-					class="form-control mb-3"
-				/>
-				<input
-					type="submit"
-					class="btn btn-primary"
-					value="Submit Post"
-				/>
-			</form>
-
-			<form
-				action="http://localhost/Peks/Twitter_Rest/twitter_rest/Backend/"
-				method="get"
-				class="mb-3"
-			>
-				<input
-					type="text"
-					name="name"
-					id="name_post"
-					class="form-control mb-3"
-				/>
-				<input
-					type="submit"
-					class="btn btn-primary"
-					value="Submit Get"
-				/>
-			</form>
-		</main>
-		-->
 
 		<!-- JavaScript Bundle with Popper -->
 		<script

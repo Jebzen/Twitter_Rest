@@ -31,14 +31,16 @@ form.addEventListener("submit", async (e) => {
 	timeline.innerHTML = "";
 
 	twit.forEach((pip) => {
+		console.log(pip.message);
+		const avatarString = avatar.replace(/\s/g, "");
 		timeline.innerHTML += `
-			<div class="post p-3 border-bottom border-1 border-dark row mx-0">
+			<div class="post p-3 border-bottom border-1 border-secondary row mx-0">
 				<div class="col-auto">
-					<div class="avatar bg-white rounded-circle" style="background-image: url(${pip.avatar});"></div>
+					<div class="avatar bg-white rounded-circle" style="background-image: url(${avatarString});"></div>
 				</div>
 				<div class="col-10">
 					<p class="fw-bold">@${pip.username}</p>
-					<p>${pip.message}</p>
+					<p class="message">${pip.message}</p>
 				</div>
 			</div>`;
 	});
