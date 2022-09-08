@@ -12,8 +12,99 @@
 			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 			crossorigin="anonymous"
 		/>
+		<style>
+			.h-min-100 {
+				min-height: 100vh;
+				overflow-y: hidden;
+			}
+			header section {
+				padding: 1rem;
+			}
+			footer section {
+				padding: 1rem;
+			}
+			.avatar {
+				width: 50px;
+				height: 50px;
+				background-position: center;
+				background-size: contain;
+			}
+		</style>
 	</head>
 	<body>
+		<div
+			class="bg-light w-100 pb-auto"
+			style="min-height: 100vh; overflow: hidden"
+		>
+			<section class="row h-min-100">
+				<header class="col border-end border-dark border-1 h-min-100">
+					<section>Logo</section>
+					<section>Home</section>
+					<section>Explore</section>
+				</header>
+				<main class="col-8 col-lg-6 px-0">
+					<!-- FORM SUBMISSION -->
+					<form
+						action="/backend"
+						method="post"
+						class="border-bottom border-dark border-1 p-3"
+					>
+						<div class="mb-3">
+							<label for="username" class="form-label"
+								>Username</label
+							>
+							<input
+								type="text"
+								name="username"
+								id="username"
+								class="form-control"
+							/>
+						</div>
+						<div class="mb-3">
+							<label for="message" class="form-label"
+								>Message</label
+							>
+							<textarea
+								class="form-control"
+								id="message"
+								rows="3"
+							></textarea>
+						</div>
+						<div class="mb">
+							<input
+								type="submit"
+								value="Submit"
+								class="btn btn-primary"
+							/>
+						</div>
+					</form>
+					<!-- TIMELINE -->
+					<section id="timeline">
+						<!-- POST TEMPLATE -->
+						<div
+							class="post p-3 border-bottom border-1 border-dark row mx-0"
+						>
+							<div class="col-auto">
+								<div
+									class="avatar bg-dark rounded-circle"
+									style="
+										background-image: url(https://i.insider.com/6277cf0e94a2c10018ee79e6?width=995&format=jpeg);
+									"
+								></div>
+							</div>
+							<div class="col-10">
+								<p class="fw-bold">@Username</p>
+								<p>Message</p>
+							</div>
+						</div>
+					</section>
+				</main>
+				<footer class="col border-start border-dark border-1 h-min-100">
+					<section>News</section>
+				</footer>
+			</section>
+		</div>
+		<!--
 		<main class="container">
 			<h1>Hello world</h1>
 			<form
@@ -52,6 +143,7 @@
 				/>
 			</form>
 		</main>
+		-->
 
 		<!-- JavaScript Bundle with Popper -->
 		<script
