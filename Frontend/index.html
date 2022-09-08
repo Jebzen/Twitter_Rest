@@ -32,6 +32,18 @@
 			.message {
 				white-space: pre-wrap;
 			}
+			header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: auto;
+			}
+			footer {
+				position: fixed;
+				top: 0;
+				right: 0;
+				width: auto;
+			}
 		</style>
 	</head>
 	<body>
@@ -39,15 +51,15 @@
 			class="bg-light w-100 pb-auto"
 			style="min-height: 100vh; overflow: hidden"
 		>
-			<section class="row h-min-100">
-				<header
-					class="col border-end border-secondary border-1 h-min-100"
-				>
+			<section class="h-min-100">
+				<header class="col">
 					<section>Logo</section>
 					<section>Home</section>
 					<section>Explore</section>
 				</header>
-				<main class="col-8 col-lg-6 px-0">
+				<main
+					class="col-8 col-lg-6 px-0 mx-auto border-end border-start border-secondary border-1 h-min-100"
+				>
 					<!-- FORM SUBMISSION -->
 					<form
 						action="/backend"
@@ -105,9 +117,7 @@
 						</div>
 					</section>
 				</main>
-				<footer
-					class="col border-start border-secondary border-1 h-min-100"
-				>
+				<footer class="col">
 					<section>News</section>
 				</footer>
 			</section>
